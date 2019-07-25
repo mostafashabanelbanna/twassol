@@ -1,5 +1,4 @@
 const jwt = require('jsonwebtoken');
-const JWT_KEY = 'the-secret-to-jwt-lives-here';
 
 module.exports = (req, res, next) => {
     try{
