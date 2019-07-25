@@ -9,6 +9,8 @@ const Post = require('./models/post');
 
 const app = express();
 
+const MONGO_ATLAS_PW = 'URth3TD5RXcdGdl8'
+
 mongoose.connect('mongodb+srv://mostafa:' + MONGO_ATLAS_PW + '@cluster0-k2php.mongodb.net/test')
     .then(() => {
         console.log('Connected to database!');
