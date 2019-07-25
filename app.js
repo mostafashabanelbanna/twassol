@@ -8,8 +8,8 @@ const userRoutes = require('./routes/user');
 const Post = require('./models/post');
 
 const app = express();
-
-mongoose.connect('mongodb+srv://mostafa:' + process.env.MONGO_ATLAS_PW + '@cluster0-k2php.mongodb.net/test')
+// URth3TD5RXcdGdl8
+mongoose.connect('mongodb+srv://mostafa:' + MONGO_ATLAS_PW + '@cluster0-k2php.mongodb.net/test')
     .then(() => {
         console.log('Connected to database!');
     })
@@ -17,7 +17,7 @@ mongoose.connect('mongodb+srv://mostafa:' + process.env.MONGO_ATLAS_PW + '@clust
         console.log('Connect to database faild');
     });
 app.use(bodyParser.json());
-app.use('/images', express.static(path.join(__dirname, 'images')));
+app.use('/images', express.static(path.join(__dirname, 'backend/images')));
 app.use('/', express.static(path.join(__dirname, 'angular')));
 
 app.use((req, res, next) => {
