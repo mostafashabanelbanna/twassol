@@ -1,8 +1,11 @@
 {
   "name": "twassol",
   "version": "0.0.0",
+  "engines": {
+    "node": "8.11.1"
+  },
   "scripts": {
-    "install": "cd client && npm install && npm run build && cd ..",
+    
     "start": "node server.js"
   },
   "private": true,
