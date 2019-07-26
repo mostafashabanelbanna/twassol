@@ -5,7 +5,6 @@ const path = require('path');
 
 const postsRoutes = require('./routes/posts');
 const userRoutes = require('./routes/user');
-const Post = require('./models/post');
 
 const app = express();
 
@@ -19,7 +18,7 @@ mongoose.connect('mongodb+srv://mostafa:' + MONGO_ATLAS_PW + '@cluster0-k2php.mo
         console.log('Connect to database faild');
     });
 app.use(bodyParser.json());
-app.use('/images', express.static(path.join(__dirname, 'images')));
+app.use('/images', path.join(__dirname, 'images'));
 app.use('/', express.static(path.join(__dirname, 'angular')));
 
 app.use((req, res, next) => {

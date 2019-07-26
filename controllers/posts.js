@@ -16,7 +16,6 @@ exports.createPost = (req, res, next) => {
                     ...createdPost,
                     id: createdPost._id
                 }
-
             });
     }).catch(error => {
         console.log(error);
